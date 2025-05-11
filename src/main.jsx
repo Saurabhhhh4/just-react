@@ -2,6 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
+
+import CounterWithoutRerender from "./components/CounterWithoutRerender.jsx";
+// import FocusInput from "./components/FocusInput.jsx";
+
 // import SPA from "./components/SPA.jsx";
 // import Home from "./components/Home.jsx";
 // import ClassComp from "./components/classComp.jsx";
@@ -13,12 +17,18 @@ import App from "./App.jsx";
 // import KetAttribute from "./components/KetAttribute.jsx";
 // import TodoList from "./components/TodoList.jsx";
 // import MyComponent from "./components/MyComponent.jsx";
-import UseTransition from "./components/useTransition.jsx";
+// import UseTransition from "./components/useTransition.jsx";
+import ThemeDisplay from "./components/ThemeDisplay.jsx";
+import { ThemeContext } from "./components/ThemeDisplay.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    {/* <ThemeDisplay /> */}
+    <ThemeContext.Provider value="dark">
+      <ThemeDisplay />
+    </ThemeContext.Provider>
     {/* <App /> */}
-    <SPA />
+    {/* <SPA /> */}
     {/* <ClassComp /> */}
     {/* <FunctionComp /> */}
     {/* <ExUseEffect /> */}
@@ -28,6 +38,8 @@ createRoot(document.getElementById("root")).render(
     {/* <KetAttribute /> */}
     {/* <TodoList /> */}
     {/* <MyComponent /> */}
-    <UseTransition />
+    {/* <UseTransition /> */}
+    {/* <FocusInput /> */}
+    {/* <CounterWithoutRerender /> */}
   </StrictMode>
 );
