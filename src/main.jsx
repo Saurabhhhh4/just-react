@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
+// import YesMemo from "./components/YesMemo.jsx";
 // import Navbar from "./components/Navbar.jsx";
 // import CounterWithoutRerender from "./components/CounterWithoutRerender.jsx";
 // import FocusInput from "./components/FocusInput.jsx";
@@ -40,7 +41,7 @@ createRoot(document.getElementById("root")).render(
     {/* <UseTransition /> */}
     {/* <FocusInput /> */}
     {/* <CounterWithoutRerender /> */}
-
+    {/* <YesMemo /> */}
     {/* <Navbar count={count} /> */}
   </StrictMode>
 );
