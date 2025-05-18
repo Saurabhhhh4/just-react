@@ -1,12 +1,19 @@
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//
+
+const people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 25 },
+  { name: "David", age: 30 },
+];
+
 const grouped = {};
 
-numbers.forEach((num) => {
-  const key = num % 3;
-  if (!grouped[key]) {
-    grouped[key] = [];
+people.forEach((person) => {
+  if (!grouped[person.age]) {
+    grouped[person.age] = [];
   }
-  grouped[key].push(num);
+  grouped[person.age].push(person.name);
 });
 
 console.log(grouped);
