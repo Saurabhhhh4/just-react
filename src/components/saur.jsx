@@ -25,13 +25,26 @@ const people = [
   { name: "David", age: 30 },
 ];
 
-const grouped = {};
+// const grouped = {};
 
-people.forEach((person) => {
-  if (!grouped[person.age]) {
-    grouped[person.age] = [];
-  }
-  grouped[person.age].push(person.name);
-});
+// people.forEach((person) => {
+//   if (!grouped[person.age]) {
+//     grouped[person.age] = [];
+//   }
+//   grouped[person.age].push(person.name);
+// });
 
-console.log(grouped);
+// console.log(grouped);
+
+import React, { useState } from "react";
+
+// 🔹 HOC function
+function withCounter(WrappedComponent) {
+  return function EnhancedComponent(props) {
+    const [count, setCount] = useState(0);
+
+    const increment = () => setCount(count + 1);
+
+    return <WrappedComponent count={count} increment={increment} {...props} />;
+  };
+}
