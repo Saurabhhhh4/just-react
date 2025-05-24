@@ -18,12 +18,12 @@ people.forEach((person) => {
 
 console.log(grouped);
 
-const people = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
-  { name: "Charlie", age: 25 },
-  { name: "David", age: 30 },
-];
+// const people = [
+//   { name: "Alice", age: 25 },
+//   { name: "Bob", age: 30 },
+//   { name: "Charlie", age: 25 },
+//   { name: "David", age: 30 },
+// ];
 
 // const grouped = {};
 
