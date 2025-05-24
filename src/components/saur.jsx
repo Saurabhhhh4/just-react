@@ -36,15 +36,27 @@ const people = [
 
 // console.log(grouped);
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 // 🔹 HOC function
-function withCounter(WrappedComponent) {
-  return function EnhancedComponent(props) {
-    const [count, setCount] = useState(0);
+// function withCounter(WrappedComponent) {
+//   return function EnhancedComponent(props) {
+//     const [count, setCount] = useState(0);
 
-    const increment = () => setCount(count + 1);
+//     const increment = () => setCount(count + 1);
 
-    return <WrappedComponent count={count} increment={increment} {...props} />;
-  };
+//     return <WrappedComponent count={count} increment={increment} {...props} />;
+//   };
+// }
+
+function ClickCounter({ count, increment }) {
+  return <button onClick={increment}>Clicked {count} times</button>;
 }
+
+function HoverCounter({ count, increment }) {
+  return <h2 onMouseOver={increment}>Hovered {count} times</h2>;
+}
+
+// Applying HOC
+const EnhancedClickCounter = withCounter(ClickCounter);
+const EnhancedHoverCounter = withCounter(HoverCounter);
